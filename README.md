@@ -52,6 +52,7 @@ for x in `find ./tmp/ -name "*.tar.gz"`;do \
     tar -zxf $x -C $app; \
 done
 rm -fr ./tmp && rm -fr falcon-latest.tar.gz
+exit
 
 # TODO: modify module configuration files
 # module written in go: 
@@ -68,5 +69,7 @@ for module in "${modules[@]}"
 do
     cp /tmp/falcon-initd-master/falcon-$module /etc/init.d/ && chmod +x /etc/init.d/falcon-$module
     update-rc.d falcon-$module defaults
+    service falcon-$module start
 done
+
 ```
