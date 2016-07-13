@@ -73,3 +73,6 @@ do
 done
 
 ```
+
+# Architecture
+![Falcon Deployment Architecture](https://raw.githubusercontent.com/hfdiao/falcon-deploy/master/architecture.png)
